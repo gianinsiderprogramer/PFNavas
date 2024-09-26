@@ -10,16 +10,6 @@ body {
     text-align: center;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -75,4 +65,51 @@ footer {
     padding: 10px;
     background-color: #f8f9fa;
     font-size: 14px;
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.image-section {
+    flex: 1;
+    text-align: right;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image-section {
+        text-align: center;
+    }
 }

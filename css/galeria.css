@@ -10,16 +10,6 @@ body {
     text-align: center;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -76,3 +66,51 @@ footer {
     background-color: #f8f9fa;
     font-size: 14px;
 }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+@media (min-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+    
