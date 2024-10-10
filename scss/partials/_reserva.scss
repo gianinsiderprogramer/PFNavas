@@ -1,0 +1,77 @@
+$max-width-form: 600px;
+$padding: 20px;
+$background-color-form: #f9f9f9;
+$border-color: #ccc;
+$border-radius: 8px;
+$box-shadow-form: 0 4px 8px rgba(0, 0, 0, 0.1);
+$font-color-legend: #333;
+$font-color-label: #555;
+$input-background: #fff;
+$button-background: #007bff;
+$button-hover-background: #0056b3;
+$focus-color: #007bff;
+$focus-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+form {
+  max-width: $max-width-form;
+  margin: auto;
+  padding: $padding;
+  background-color: $background-color-form;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-form;
+
+  legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $font-color-legend;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: $font-color-label;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="time"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: $input-background;
+    margin-bottom: 20px;
+
+    &:focus {
+      outline: none;
+      border-color: $focus-color;
+      box-shadow: $focus-shadow;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: $button-background;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $button-hover-background;
+    }
+  }
+}

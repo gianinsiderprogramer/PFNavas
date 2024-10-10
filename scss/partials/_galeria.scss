@@ -1,0 +1,36 @@
+$grid-gap: 15px;
+$padding: 20px;
+$border-radius: 8px;
+$transition-duration: 0.3s;
+$hover-scale: 1.05;
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $grid-gap;
+  padding: $padding;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform $transition-duration ease;
+
+    &:hover {
+      transform: scale($hover-scale);
+    }
+  }
+}

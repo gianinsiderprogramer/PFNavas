@@ -1,0 +1,57 @@
+$colorNyF: #f8f8fafd;
+$text-color: #000;
+$nav-gap: 15px;
+$font-size: 20px;
+$toggle-font-size: 24px;
+$padding-desktop: 10px 20px;
+$padding-mobile: 20px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-desktop;
+  background-color: $colorNyF;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: $nav-gap;
+
+  @media (max-width: 768px) {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #f8f9fa;
+    padding: $padding-mobile;
+    box-shadow: $box-shadow;
+  }
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: $text-color;
+  font-size: $font-size;
+}
+
+.nav-toggle {
+  display: none;
+
+  &:checked + .nav-toggle-label + .nav-list {
+    display: flex;
+  }
+}
+
+.nav-toggle-label {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    font-size: $toggle-font-size;
+    cursor: pointer;
+  }
+}
