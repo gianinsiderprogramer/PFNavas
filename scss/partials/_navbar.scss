@@ -7,6 +7,7 @@ $padding-desktop: 10px 20px;
 $padding-mobile: 20px;
 $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -15,13 +16,15 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: $colorNyF;
 }
 
+
 .nav-list {
   display: flex;
   list-style: none;
   gap: $nav-gap;
 
+
   @media (max-width: 768px) {
-    display: none;
+    display: none; 
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -29,8 +32,10 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
     padding: $padding-mobile;
     box-shadow: $box-shadow;
+    z-index: 10;
   }
 }
+
 
 .nav-item a {
   text-decoration: none;
@@ -38,13 +43,16 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: $font-size;
 }
 
+
 .nav-toggle {
   display: none;
 
-  &:checked + .nav-toggle-label + .nav-list {
+
+  &:checked ~ .nav-list {
     display: flex;
   }
 }
+
 
 .nav-toggle-label {
   display: none;

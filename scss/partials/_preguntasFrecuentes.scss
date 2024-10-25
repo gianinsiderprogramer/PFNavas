@@ -85,7 +85,9 @@ $transition-speed: 0.4s;
 
 @media only screen and (max-width: 768px) {
     .faq-section {
+        max-width: 100%; 
         padding: 20px;
+        
         h2 {
             font-size: 2rem;
         }
@@ -103,7 +105,9 @@ $transition-speed: 0.4s;
 
 @media only screen and (max-width: 480px) {
     .faq-section {
+        max-width: 100%;
         padding: 10px;
+        
         h2 {
             font-size: 1.8rem;
         }

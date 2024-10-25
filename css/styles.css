@@ -209,6 +209,7 @@ form button:hover {
 
 @media only screen and (max-width: 768px) {
   .faq-section {
+    max-width: 100%;
     padding: 20px;
   }
   .faq-section h2 {
@@ -224,6 +225,7 @@ form button:hover {
 }
 @media only screen and (max-width: 480px) {
   .faq-section {
+    max-width: 100%;
     padding: 10px;
   }
   .faq-section h2 {
@@ -260,6 +262,7 @@ form button:hover {
     background-color: #f8f9fa;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
   }
 }
 
@@ -272,7 +275,7 @@ form button:hover {
 .nav-toggle {
   display: none;
 }
-.nav-toggle:checked + .nav-toggle-label + .nav-list {
+.nav-toggle:checked ~ .nav-list {
   display: flex;
 }
 

@@ -6,6 +6,7 @@
     <title>Coiffeur Style</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/Icono.jpg">
 </head>
 <body>
     
@@ -24,15 +25,15 @@
     </header>
 
     <main>
-        <form>
+        <form onsubmit="event.preventDefault(); sendWhatsApp();"> 
             <legend>Información de la reserva</legend>
-    
+        
             <label for="name">Nombre completo:</label>
             <input type="text" id="name" name="name" required>
-    
+        
             <label for="phone">Teléfono:</label>
             <input type="tel" id="phone" name="phone" required>
-    
+        
             <label for="service">Selecciona el servicio:</label>
             <select id="service" name="service" required>
                 <option value="" disabled selected>Elige una opción</option>
@@ -40,10 +41,10 @@
                 <option value="peinados">Peinados</option>
                 <option value="cortes">Cortes</option>
             </select>
-    
+        
             <label for="date">Fecha de la reserva:</label>
             <input type="date" id="date" name="date" required>
-    
+        
             <label for="time">Hora de la reserva:</label>
             <input type="time" id="time" name="time" required>
             
@@ -59,6 +60,8 @@
         Copyright © Todos los derechos reservados
         y pertenecientes a Gian's®
     </footer>
+
+    <script src="../js/reserva.js"></script>
 
 </body>
 </html>
